@@ -1,6 +1,16 @@
 {
- "generated": "12 Oct 2026, 05:25 PM",
+ "generated": "12 Oct 2026, 05:36 PM",
  "items": [
+  {
+   "title": "i heart radio",
+   "source": "Google Trends US",
+   "kind": "trend"
+  },
+  {
+   "title": "pope leo surgery",
+   "source": "Google Trends US",
+   "kind": "trend"
+  },
   {
    "title": "kerry kennedy",
    "source": "Google Trends US",
@@ -42,14 +52,64 @@
    "kind": "trend"
   },
   {
-   "title": "roger marshall bakery debt payment",
-   "source": "Google Trends US",
-   "kind": "trend"
+   "title": "Saii Kay - Iau Tar Les (ft. Heff Lourie, Maix Kay & Donz Kay)",
+   "source": "YouTube Trending US",
+   "kind": "trend",
+   "extra": "33367 views"
   },
   {
-   "title": "columbus day parade",
-   "source": "Google Trends US",
-   "kind": "trend"
+   "title": "GODZILLA MINUS ZERO | Official Trailer 2",
+   "source": "YouTube Trending US",
+   "kind": "trend",
+   "extra": "3299352 views"
+  },
+  {
+   "title": "We tried NEW Backrooms games...",
+   "source": "YouTube Trending US",
+   "kind": "trend",
+   "extra": "1527680 views"
+  },
+  {
+   "title": "Ayra Starr - Heaven Baby ft. ZAYN",
+   "source": "YouTube Trending US",
+   "kind": "trend",
+   "extra": "8129464 views"
+  },
+  {
+   "title": "Tekken 8 Yujiro Reveal Trailer | EVO France 2026",
+   "source": "YouTube Trending US",
+   "kind": "trend",
+   "extra": "983166 views"
+  },
+  {
+   "title": "We Learned To Fly - Sky Factory Season 7 EP 5",
+   "source": "YouTube Trending US",
+   "kind": "trend",
+   "extra": "664058 views"
+  },
+  {
+   "title": "Tarvin Toune - B.D.H (Breathe.Dream.Hustle) Official Music Video feat. Sprigga Mek",
+   "source": "YouTube Trending US",
+   "kind": "trend",
+   "extra": "16111 views"
+  },
+  {
+   "title": "TEKKEN 8 - Roger Jr. Gameplay Reveal Trailer",
+   "source": "YouTube Trending US",
+   "kind": "trend",
+   "extra": "429269 views"
+  },
+  {
+   "title": "Finally Beating Outlast 1 (FULL GAME)",
+   "source": "YouTube Trending US",
+   "kind": "trend",
+   "extra": "77836 views"
+  },
+  {
+   "title": "SOMEBODY LOVES ME",
+   "source": "YouTube Trending US",
+   "kind": "trend",
+   "extra": "186037 views"
   },
   {
    "title": "Zelensky backs Trump's 'energy ceasefire' but says Russia continues to hit power plants",
@@ -148,6 +208,12 @@
    "link": "https://www.npr.org/2026/10/11/nx-s1-5998027/pope-leo-xiv-to-undergo-lung-surgery-this-week"
   },
   {
+   "title": "Which banners did Liverpool fans display at Anfield against Man City?",
+   "source": "Al Jazeera",
+   "kind": "news",
+   "link": "https://www.aljazeera.com/sports/2026/10/12/which-banners-did-liverpool-fans-display-at-anfield-against-man-city?traffic_source=rss"
+  },
+  {
    "title": "Far right surges as crises threaten Sanchez: Could Vox lead Spain?",
    "source": "Al Jazeera",
    "kind": "news",
@@ -188,12 +254,6 @@
    "source": "Al Jazeera",
    "kind": "news",
    "link": "https://www.aljazeera.com/news/2026/10/12/ukraines-zelenskyy-accuses-russia-of-violating-trumps-energy-ceasefire?traffic_source=rss"
-  },
-  {
-   "title": "What we learned from ‘guilty’ Man City’s win over Liverpool at Anfield",
-   "source": "Al Jazeera",
-   "kind": "news",
-   "link": "https://www.aljazeera.com/sports/2026/10/12/manchester-city-guilty-verdict-financial-charges-liverpool-anfield?traffic_source=rss"
   }
  ]
 }
