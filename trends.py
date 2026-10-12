@@ -8,7 +8,8 @@ import html
 import json
 import re
 import urllib.parse
-from datetime import datetime, timezone
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 import feedparser
 
@@ -37,6 +38,35 @@ def get_google_trends():
                 items.append({"title": t, "source": "Google Trends US", "kind": "trend"})
     except Exception as e:
         print("google trends rss failed:", e)
+    return items
+
+
+def get_youtube_trending():
+    """YouTube Trending US — key youtube_key.txt mein (git mein nahi jati)."""
+    import os
+    key_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "youtube_key.txt")
+    if not os.path.exists(key_file):
+        return []
+    key = open(key_file).read().strip()
+    if not key:
+        return []
+    items = []
+    try:
+        import urllib.request
+        url = ("https://www.googleapis.com/youtube/v3/videos"
+               "?part=snippet,statistics&chart=mostPopular&regionCode=US"
+               f"&maxResults=10&key={urllib.parse.quote(key)}")
+        req = urllib.request.Request(url, headers={"User-Agent": "trending-tool/1.0"})
+        with urllib.request.urlopen(req, timeout=25) as r:
+            data = json.load(r)
+        for it in data.get("items", []):
+            title = it.get("snippet", {}).get("title", "").strip()
+            views = it.get("statistics", {}).get("viewCount", "")
+            if title:
+                items.append({"title": title, "source": "YouTube Trending US",
+                              "kind": "trend", "extra": views + " views" if views else ""})
+    except Exception as e:
+        print("youtube trending failed:", e)
     return items
 
 
@@ -79,6 +109,8 @@ def dedupe(items):
 def card(it):
     t = html.escape(it["title"])
     src = html.escape(it["source"])
+    if it.get("extra"):
+        src += " · " + html.escape(it["extra"])
     badge = "TREND" if it["kind"] == "trend" else "NEWS"
     bcolor = "#d4af37" if it["kind"] == "trend" else "#4a90d9"
     main_btn = ""
@@ -130,8 +162,8 @@ h3{{font-size:17px;margin:10px 0 12px;line-height:1.4}}
 
 
 def main():
-    items = dedupe(get_google_trends() + get_news())
-    now = datetime.now(timezone.utc).astimezone()
+    items = dedupe(get_google_trends() + get_youtube_trending() + get_news())
+    now = datetime.now(ZoneInfo("Asia/Karachi"))
     stamp = now.strftime("%d %b %Y, %I:%M %p")
     html_out = build_html(items, stamp)
     with open("index.html", "w", encoding="utf-8") as f:
